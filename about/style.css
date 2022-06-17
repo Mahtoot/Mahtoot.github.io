@@ -1,0 +1,932 @@
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    padding: inherit;
+    margin: inherit;
+    box-sizing: inherit;
+}
+
+/* ------------ hero section -------*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('images/girl_hood.jpg');
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+.hero div{
+    width: fit-content;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.hero div h1{
+    font-family: sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    transition: all .6s;
+    text-shadow: 0 0 30px #e91e63, 5px 5px 60px #ffeb3b;
+
+}
+
+.hero span{
+    height: 100%;
+    background: #e91e63;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+}
+
+.hero div h1:nth-child(1) span{
+    animation: animate-span 2s linear forwards;
+}
+
+.hero div h1:nth-child(2) span{
+    animation: animate-span 2s 2s linear forwards;
+}
+
+.hero div h1:nth-child(3) span{
+    animation: animate-span 2s 4s linear forwards;
+}
+
+.hero a span{
+    animation: animate-span 2s 6s linear forwards;
+}
+
+.hero div h1:nth-child(1){
+    color: transparent;
+    animation: animate-text 1s 1s linear forwards;
+}
+
+.hero div h1:nth-child(2){
+    color: transparent;
+    animation: animate-text 1s 3s linear forwards;
+}
+
+.hero a{
+    color: transparent;
+    animation: animate-damn 1s 7s linear forwards;
+    text-shadow: 0 0 30px #e91e63, 5px 5px 60px #ffeb3b;
+    transition: all 1s;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+#logo{
+    color: transparent;
+    animation: animate-logo 1s 5s linear forwards;
+}
+
+.hero h1:hover, .hero a:hover{
+    text-shadow: 0 0 30px cyan, 5px 5px 60px #ffeb3b;
+}
+
+.hero-btn{
+    text-decoration: none;
+    font-size: 2em;
+    font-family: cursive;
+    color: slategray;
+    cursor: pointer;
+    position: relative;
+}
+/* -------- End hero section --------*/
+
+/* -------- services section --------*/
+.section{
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+}
+
+.title{
+    width: 50%;
+    margin: auto;
+}
+
+.title h1, .projects > h1{
+    font-weight: 300;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    font-size: 3em;
+    padding-top: 13vh;
+
+}
+
+.title p{
+    color: darkcyan;
+    margin: auto auto 10vh auto;
+}
+
+h1 span{
+    font-weight: 900;
+    color: crimson;
+}
+
+.services{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-col{
+    width: 23%;
+    text-align: left;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('images/mountain.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    padding: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+.service-col p{
+    color: darkgray;
+    text-indent: 1em;
+    font-family: monospace;
+    font-size: 1.3em;
+}
+
+.row .service-col img{
+    margin-top: auto;
+    padding: 0 0 0 1em;
+}
+
+.row .service-col h3{
+    padding: 1em 0;
+}
+/* -------- End services section ----*/
+
+/* -------- Projects section ----*/
+.section-projects{
+    width: 70%;
+    text-align: center;
+    height: auto;
+}
+
+.section-projects > h1{
+    font-weight: 300;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    font-size: 3em;
+    padding: 1em 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.project{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    background: #323C47;
+}
+
+div[class*=pro]{
+    flex: 1;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.pro-def{
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.pro-def p{
+    color: lightgray;
+    line-height: 1.5;
+}
+
+.pro-def h5{
+    line-height: 2.5;
+    font-weight: 900;
+}
+
+.pro-def h1{
+    font-weight: 900;
+}
+
+.inner{
+    padding: 1em;
+}
+
+.pro-img{
+    overflow: hidden;
+    position: relative;
+}
+
+.project:hover img{
+    transform: scale(1.2)
+}
+.pro-img span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, .4);
+}
+/* -------- End Projects section ---- */
+
+/* -------- About me section ----*/
+
+.about-row{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    cursor: help;
+}
+
+.about-row h1{
+    font-weight: 300;
+    font-size: 3em;
+    padding: 1em 0;
+}
+
+.about img{
+    width: 300px;
+    height: 300px;
+    border: 8px solid #fff;
+        border-radius: 30px;
+}
+
+.about p{
+    line-height: 1.5;
+    color: darkgray;
+}
+
+.about h3{
+    line-height: 2;
+    font-weight: 900;
+}
+
+.about a{
+    margin: 1em auto;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    border: 2px solid crimson;
+    width: 60%;
+    font-size: 2em;
+    transition: all 1s;
+    cursor: pointer;
+}
+
+.about a:hover{
+    background: crimson;
+}
+.img div{
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+.img div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    top: 1.5em;
+    left: -1.5em;
+    border: 8px solid crimson;
+    z-index: -1;
+    border-radius: 10px;
+
+}
+
+.about-me:hover .about-row{
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+/* -------- End About me section ----*/
+
+/* -------- Contact Info Section ----*/
+section.section.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-cont{
+    width: 100%;
+    text-align: center;
+}
+
+.contact-row{
+    display: flex;
+}
+.contact-col{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    margin: 1em;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    transition: all .5s;
+}
+
+.contact-col:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+
+[class*=contact-det-info]{
+    flex: 2;
+    text-align: left;
+}
+
+[class*=contact-det-img]{
+    flex: 1;
+    margin: 1em;
+}
+
+.contact-col h1{
+    font-size: 3em;
+}
+
+.contact-col h2{
+    font-weight: bold;
+}
+
+.contact-cont > h1{
+    font-weight: 300;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    font-size: 3em;
+    padding: 0 0 1em 0;
+}
+/* -------- End Contact Info Section ----*/
+
+/* -------- Footer section ---------*/
+.footer{
+    padding: 2em;
+    text-align: center;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    background: linear-gradient(to bottom, rgba(127, 255, 212, .5), rgba(95, 158, 160, 1))
+}
+
+.footer h1{
+    font-weight: 300;
+    font-family: Bahnschrift, Century Gothic, Agency FB, sans-serif;
+    font-size: 2em;
+}
+
+.footer h2{
+    font-size: 2em;
+}
+.footer h2 span{
+    margin: .2em;
+    line-height: 2.5;
+    cursor: pointer;
+    padding: .2em;
+    transition: all 1s;
+}
+
+.footer h2 span:hover{
+    border: 2px solid black;
+    border-radius: 50%;
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+}
+
+#log{
+    font-weight: 900;
+}
+/* -------- End Footer section ---------*/
+
+/* ----- keyframes ----- */
+@keyframes animate-span{
+    0%{width: 0; left: 0;}
+    50% {width: 100%;left: 0}
+    100% {width: 0; left: 100%;}
+}
+
+@keyframes animate-text{
+    100%{color: white;}
+}
+
+@keyframes animate-damn{
+    100%{color: slategray;}
+}
+
+@keyframes animate-logo{
+    100%{
+    font-style: italic;
+    color: black;
+    text-decoration: line-through;
+    transition: all 1s;
+    text-shadow: 0 0 30px cyan, 5px 5px 60px blue;
+    }
+}
+/* ----- end keyframes ----*/
+
+/* ----- media ----- */
+@media (max-width: 1260px){
+    .row .col{
+        width: 45%;
+        margin-top: 2em;
+    }
+    .row .service-col p{
+        margin-top: auto;
+    }
+    .row .service-col h3{
+        margin-top: auto;
+    }
+    .row .service-col img{
+        margin-top: auto;
+    }
+    .title p{
+        margin: 0;
+    }
+    .title h1{
+        padding-top: 5vh;
+    }
+    .services .row{
+        padding-bottom: 5vh;
+    }
+    .services{
+        height: auto;
+    }
+   .title{
+        width: 80%;
+    }
+}
+
+@media (max-width: 730px){
+    .project{
+        margin-top: 1em;
+        border-radius: 10px;
+        flex-direction: column;
+    }
+    .pro-img{
+        order: 1;
+    }
+    .project img{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .pro-img span{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (max-width: 600px){
+    .row .col{
+        width: 100%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .section-projects{
+        width: 80%;
+    }
+}
+
+@media (max-width: 750px){
+    .hero div h1{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 450px){
+    .hero div h1{
+        font-size: 2.5em;
+    }
+    .hero div{
+        left: 10%;
+    }
+    .hero-btn{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 350px){
+    .hero div{
+        left: 5%;
+    }
+    .hero-btn{
+        font-size: 1.3em;
+    }
+    .title h1{
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 300px){
+    .hero div h1{
+        font-size: 2em;
+    }
+    .hero div{
+        left: 5%;
+    }
+    .title h1{
+        font-size: 2em;
+    }
+    .title p{
+        text-align: left;
+    }
+    .section-projects h1{
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 258px){
+    .hero div h1{
+        font-size: 1.5em;
+    }
+    .hero div{
+        left: 10%;
+    }
+    .hero-btn{
+        font-size: 1em;
+    }
+    .pro-def h1{
+        font-size: 1.5em;
+    }
+    .contact-cont>h1{
+        font-size: 2em;
+    }
+    #contact{
+        width: 100%;
+    }
+    .contact-col{
+        margin: 1em .5em;
+    }
+}
+
+@media (max-width: 230px){
+    .hero div #logo{
+        font-size: 1.5em;
+    }
+    .hero div{
+        left: 1%;
+    }
+    .hero-btn{
+        font-size: .8em;
+    }
+    .pro-def h1{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 530px){
+    .about a{
+        font-size: 1.5em;
+        padding: .3em 0;
+    }
+}
+
+@media (max-width: 400px){
+    .about a{
+        width: 80%;
+    }
+    .about img{
+        width: 90%;
+        height: auto;
+    }
+    .img div::after{
+        top: 1em;
+        left: -.5em;
+        width: 90%;
+    }
+}
+
+@media (max-width: 300px){
+    .about a{
+        width: 90%;
+    }
+    .about p{
+        text-align: left;
+    }
+}
+
+@media (max-width: 225px){
+    .about a{
+        font-size: 1em;
+        width: 100%;
+    }
+    .about p{
+        text-align: left;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 400px){
+.about-me{
+    height: auto;
+}
+}
+
+@media (min-width: 800px) and (orientation: landscape){
+.txt{
+    width: 70%;
+    margin: auto;
+}
+}
+
+@media (min-width: 869px) and (orientation: landscape){
+    .about-row{
+        flex-direction: row;
+        width: 85%;
+    }
+    .about-me{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .txt{
+        margin: inherit;
+        flex: 1;
+        text-align: left;
+    }
+    .img{
+        flex: 1;
+    }
+    .img div{
+        margin-right: 1em;
+    }
+    #about-hero{
+        text-align: center;
+    }
+    .txt h1{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 1240px ) and (min-width: 869px) {
+    .about a{
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: portrait){
+    .about-me{
+        height: auto;
+    }
+}
+
+@media (max-width: 869px){
+    .about-me{height: auto;}
+    .about-me {
+        margin: 2em auto;
+    }
+    .about p{
+        padding: 1em;
+    }
+}
+
+@media (min-width: 930px){
+    .about-row{
+        padding: 2em;
+    }
+}
+
+@media (max-width: 995px){
+    .contact{
+        width: 90%;
+    }
+}
+
+@media (max-width: 889px){
+    .contact{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .contact{
+        width: 80%;
+    }
+    .contact-col{
+        flex-direction: column;
+        text-align: center;
+    }
+    [class*=contact-det]{
+        text-align: center;
+    }
+}
+
+@media (max-width: 631px){
+    .contact-row{
+        flex-direction: column;
+    }
+    #contact{
+        height: auto;
+    }
+    .contact-cont > h1{
+        padding: 1em 0;
+    }
+}
+
+@media (max-width: 380px){
+    .footer h1{
+        font-size: 1.5em;
+    }
+    .footer h2 span{
+        font-size: 1em;
+        margin: 0;
+    }
+}
+
+@media (max-width: 321px){
+    .footer{
+        padding: 1em 0;
+    }
+}
+
+@media (max-width: 268px){
+    .footer h1{
+        font-size: 1em;
+        font-weight: bold;
+    }
+      .footer h2 span{
+        font-size: .5em;
+    }
+    .footer .mess{
+        font-size: .6em;
+    }
+
+}
+/* ----- end media ----- */
+
+/* -------- header section ----- */
+.nav{
+    background: dimgrey;
+}
+
+.fixed-nav{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background-color: dimgrey !important;
+    z-index: 5;
+    height: auto;
+}
+.nav-cont{
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.side-btn span{
+    display: block;
+    width: 2rem;
+    height: .3rem;
+    background: black;
+    margin: .2rem;
+
+}
+
+.side-btn{
+    padding: .2rem;
+    border: 2px solid;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all 1s;
+    animation-name: pagingAnim;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.link-cont{
+    margin: 2vh 10% 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.nav ul li{
+    margin: .2rem;
+}
+
+.link-cont ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ul a{
+    text-decoration: none;
+    color:darkgray;
+    font-size: 1.5rem;
+    font-family: monospace;
+    display: block;
+    padding: .3rem 0;
+    transition: all 2s;
+}
+
+ul a:hover {
+    background: linear-gradient(to right, rgba(123, 123, 123, .8), rgba(123, 123, 123, 0));
+    color: seashell;
+    border-radius: 5px;
+    padding-left: 20%;
+
+}
+
+.image-cont{
+    flex: 1;
+}
+
+.image-cont img{
+    box-shadow: 0 0 10px #fff;
+    border-radius: 10px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+    background: azure;
+    color: crimson;
+    animation: none;
+}
+
+.paging{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 10%;
+    right: 10%;
+    color: #fff;
+    background: darkgreen;
+    padding: .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: pagingAnim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pagingAnim{
+    50%{transform: scale(1.2)}
+    100%{transform: scale(1.0)}
+}
+
+@media (min-width: 600px){
+    .nav{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        background: transparent;
+    }
+
+    .link-cont ul{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    ul a{
+        font-size: 1rem;
+        color: #fff;
+        padding: 1rem 0;
+    }
+
+    .link-cont{
+        flex: 2;
+        width: auto;
+        margin: 0;
+        order: 1;
+        height: auto;
+        overflow: visible;
+    }
+
+    .side-btn{
+        display: none;
+    }
+
+}
